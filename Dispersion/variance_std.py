@@ -2,26 +2,21 @@
 # It defines two functions: variance and standard_deviation.
 # The variance function computes the average of the squared differences from the mean,
 # while the standard_deviation function returns the square root of the variance.
-data = [70, 75, 80, 85, 90]
+import statistics
 
+data = [70, 75, 80, 85, 90]
 def variance(data):
-    n = len(data)
-    if n == 0:
+    if not data:
         return 0
-    mean = sum(data) / n
-    return sum((x - mean) ** 2 for x in data) / n
+    return statistics.variance(data)
 
 def standard_deviation(data):
-    return variance(data) ** 0.5
-
+    if not data:
+        return 0
+    return statistics.stdev(data)
 
 print("Data:", data)
 var = variance(data)
 std_dev = standard_deviation(data)
 print("Variance:", var)
 print("Standard Deviation:", std_dev)
-
-
-
-
-
