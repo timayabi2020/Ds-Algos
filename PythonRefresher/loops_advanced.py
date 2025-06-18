@@ -69,3 +69,18 @@ def infinite_loop_with_break():
 
 # Example usage of infinite_loop_with_break function
 infinite_loop_with_break()
+
+# Using a while loop in collections
+def collect_even_numbers(limit):
+    even_numbers = []
+    i = 0
+    while i <= limit:
+        if i % 2 == 0:
+            even_numbers.append(i)
+        i += 1
+    return even_numbers
+# Example usage of collect_even_numbers function
+limit = 10
+print("Even Numbers up to", limit, ":", collect_even_numbers(limit))
+
+
